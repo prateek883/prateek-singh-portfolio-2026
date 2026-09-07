@@ -5,104 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projects and publications by Prateek Singh.">
     <title>Projects | Prateek Singh</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/script.js" defer></script>
 </head>
-<body>
-    <header>
-        <h1>Projects &amp; Publications</h1>
-        <p>Technical content, marketing and technology storytelling</p>
 
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" aria-current="page">Projects</a>
-            <a href="contact.html">Contact</a>
+<body class="bg-[#f8fffb] text-[#075E54]">
+    <header class="bg-gradient-to-r from-[#075E54] to-[#25D366]">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white text-xl font-bold text-[#075E54]">
+                    PS
+                </span>
+                <span class="text-xl font-bold text-white">Prateek Singh</span>
+            </a>
+
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="index.html" class="font-semibold text-white hover:text-[#b9ffd0]">Home</a>
+                <a href="about.html" class="font-semibold text-white hover:text-[#b9ffd0]">About</a>
+                <a href="projects.html" aria-current="page" class="font-semibold text-white hover:text-[#b9ffd0]">Projects</a>
+                <a href="contact.html" class="font-semibold text-white hover:text-[#b9ffd0]">Contact</a>
+            </div>
+
+            <a href="contact.html"
+               class="rounded-full bg-white px-5 py-2.5 font-semibold text-[#075E54] shadow hover:bg-[#b9ffd0]">
+                Let’s Connect
+            </a>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <p class="eyebrow">Selected Work</p>
-            <h2>Technical Publications</h2>
-            <p>
-                A selection of technical articles covering front-end development,
-                WordPress, DevOps and JavaScript tooling.
+    <main class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <section class="mx-auto max-w-3xl text-center">
+            <p class="font-bold uppercase tracking-[0.2em] text-[#25D366]">
+                Selected Work
             </p>
 
-            <div class="project-grid">
-                <article class="project-card">
-                    <span class="project-number">01</span>
-                    <h3>10 Most Important React.js Interview Questions [2022 Updated]</h3>
-                    <p>
+            <h1 class="mt-3 text-5xl font-bold tracking-tight text-[#075E54] sm:text-6xl">
+                Projects &amp; Publications
+            </h1>
+
+            <p class="mt-6 text-lg leading-8 text-slate-600">
+                Technical content, marketing and technology storytelling across
+                front-end development, WordPress, DevOps and JavaScript tooling.
+            </p>
+        </section>
+
+        <section class="mt-16">
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <article class="rounded-3xl bg-white p-7 shadow-lg ring-1 ring-[#cceedd] transition hover:-translate-y-2">
+                    <span class="font-bold text-[#25D366]">01</span>
+                    <h2 class="mt-4 text-xl font-bold text-[#075E54]">
+                        React.js Interview Questions
+                    </h2>
+                    <p class="mt-3 text-slate-600">
                         A practical guide covering important React.js concepts and
                         interview questions for developers.
                     </p>
-                    <p><strong>Focus:</strong> React.js · Front-end Development</p>
+                    <p class="mt-5 font-semibold text-[#128C7E]">
+                        React.js · Front-end Development
+                    </p>
                 </article>
 
-                <article class="project-card">
-                    <span class="project-number">02</span>
-                    <h3>Front-End Developer — What Is Front-End Development?</h3>
-                    <p>
+                <article class="rounded-3xl bg-white p-7 shadow-lg ring-1 ring-[#cceedd] transition hover:-translate-y-2">
+                    <span class="font-bold text-[#25D366]">02</span>
+                    <h2 class="mt-4 text-xl font-bold text-[#075E54]">
+                        Front-End Development
+                    </h2>
+                    <p class="mt-3 text-slate-600">
                         An accessible explanation of front-end development,
                         responsibilities and essential technologies.
                     </p>
-                    <p><strong>Focus:</strong> Web Development · Technical Education</p>
-                </article>
-
-                <article class="project-card">
-                    <span class="project-number">03</span>
-                    <h3>How to Capture an Email Address from a URL in WooCommerce?</h3>
-                    <p>
-                        A technical solution explaining how to extract email
-                        information from URLs in a WooCommerce workflow.
+                    <p class="mt-5 font-semibold text-[#128C7E]">
+                        Web Development · Technical Education
                     </p>
-                    <p><strong>Focus:</strong> WooCommerce · WordPress · PHP</p>
                 </article>
 
-                <article class="project-card">
-                    <span class="project-number">04</span>
-                    <h3>GitHub Actions: Automate Your Workflow [Beginners Guide]</h3>
-                    <p>
+                <article class="rounded-3xl bg-white p-7 shadow-lg ring-1 ring-[#cceedd] transition hover:-translate-y-2">
+                    <span class="font-bold text-[#25D366]">03</span>
+                    <h2 class="mt-4 text-xl font-bold text-[#075E54]">
+                        WooCommerce Email Capture
+                    </h2>
+                    <p class="mt-3 text-slate-600">
+                        A technical solution for capturing email addresses from
+                        URLs in a WooCommerce workflow.
+                    </p>
+                    <p class="mt-5 font-semibold text-[#128C7E]">
+                        WooCommerce · WordPress · PHP
+                    </p>
+                </article>
+
+                <article class="rounded-3xl bg-white p-7 shadow-lg ring-1 ring-[#cceedd] transition hover:-translate-y-2">
+                    <span class="font-bold text-[#25D366]">04</span>
+                    <h2 class="mt-4 text-xl font-bold text-[#075E54]">
+                        GitHub Actions Automation
+                    </h2>
+                    <p class="mt-3 text-slate-600">
                         A beginner-friendly guide to automating development
                         workflows with GitHub Actions.
                     </p>
-                    <p><strong>Focus:</strong> GitHub Actions · DevOps · Automation</p>
+                    <p class="mt-5 font-semibold text-[#128C7E]">
+                        GitHub Actions · DevOps · Automation
+                    </p>
                 </article>
 
-                <article class="project-card">
-                    <span class="project-number">05</span>
-                    <h3>Rollup vs. Webpack — A Comparison</h3>
-                    <p>
-                        A comparison of two popular JavaScript bundlers, including
-                        their capabilities, use cases and differences.
+                <article class="rounded-3xl bg-white p-7 shadow-lg ring-1 ring-[#cceedd] transition hover:-translate-y-2">
+                    <span class="font-bold text-[#25D366]">05</span>
+                    <h2 class="mt-4 text-xl font-bold text-[#075E54]">
+                        Rollup vs. Webpack
+                    </h2>
+                    <p class="mt-3 text-slate-600">
+                        A comparison of two popular JavaScript bundlers,
+                        capabilities and use cases.
                     </p>
-                    <p><strong>Focus:</strong> JavaScript · Rollup · Webpack</p>
+                    <p class="mt-5 font-semibold text-[#128C7E]">
+                        JavaScript · Rollup · Webpack
+                    </p>
                 </article>
             </div>
         </section>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <div id="publication-list"></div>
-        </section>
+        <section class="mt-24">
+            <div class="rounded-3xl bg-[#075E54] p-8 text-white shadow-xl sm:p-12">
+                <p class="font-bold uppercase tracking-[0.2em] text-[#25D366]">
+                    My Expertise
+                </p>
 
-        <section>
-            <h2>What I Bring to Projects</h2>
-            <ul>
-                <li>SEO-led content strategy</li>
-                <li>Product and solution storytelling</li>
-                <li>Technical documentation</li>
-                <li>Thought leadership content</li>
-                <li>AI-assisted content workflows</li>
-                <li>Data-driven content optimisation</li>
-            </ul>
+                <h2 class="mt-3 text-3xl font-bold sm:text-4xl">
+                    What I bring to projects
+                </h2>
+
+                <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="rounded-2xl bg-white/10 p-4">SEO-led content strategy</div>
+                    <div class="rounded-2xl bg-white/10 p-4">Product storytelling</div>
+                    <div class="rounded-2xl bg-white/10 p-4">Technical documentation</div>
+                    <div class="rounded-2xl bg-white/10 p-4">Thought leadership</div>
+                    <div class="rounded-2xl bg-white/10 p-4">AI-assisted workflows</div>
+                    <div class="rounded-2xl bg-white/10 p-4">Content optimisation</div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="current-year"></span> Prateek Singh. All rights reserved.</p>
+    <footer class="bg-[#075E54] px-6 py-8 text-center text-white">
+        <p>
+            &copy; <span id="current-year"></span>
+            Prateek Singh. All rights reserved.
+        </p>
     </footer>
 </body>
 </html>
