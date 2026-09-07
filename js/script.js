@@ -71,6 +71,7 @@ const education = [
 
 function renderExperience() {
     const container = document.querySelector("#experience-list");
+    if (!container) return;
 
     container.innerHTML = experience.map(item => `
         <article class="timeline-item">
@@ -84,6 +85,7 @@ function renderExperience() {
 
 function renderPublications() {
     const container = document.querySelector("#publication-list");
+    if (!container) return;
 
     container.innerHTML = publications.map((publication, index) => `
         <article class="publication-card">
@@ -95,6 +97,7 @@ function renderPublications() {
 
 function renderEducation() {
     const container = document.querySelector("#education-list");
+    if (!container) return;
 
     container.innerHTML = education.map(item => `
         <article class="education-item">
@@ -118,72 +121,15 @@ function enableSmoothNavigation() {
     });
 }
 
-function initializePortfolio() {
+document.addEventListener("DOMContentLoaded", () => {
     renderExperience();
     renderPublications();
     renderEducation();
     enableSmoothNavigation();
 
-    document.querySelector("#current-year").textContent =
-        new Date().getFullYear();
-}
+    const year = document.querySelector("#current-year");
 
-function initializeThemeToggle() {
-    const toggle = document.querySelector("#theme-toggle");
-    const savedTheme = localStorage.getItem("portfolio-theme");
-
-    if (!toggle) return;
-
-    if (savedTheme === "dragon") {
-        document.body.classList.add("dragon-theme");
-        toggle.textContent = "☀️ White theme";
-    }
-
-    toggle.addEventListener("click", () => {
-        const dragonTheme = document.body.classList.toggle("dragon-theme");
-
-        localStorage.setItem(
-            "portfolio-theme",
-            dragonTheme ? "dragon" : "white"
-        );
-
-        toggle.textContent = dragonTheme
-            ? "☀️ White theme"
-            : "🌙 Dragon theme";
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    initializePortfolio();
-
-    const themeToggle = document.querySelector("#theme-toggle");
-
-    if (!themeToggle) return;
-
-    const savedTheme = localStorage.getItem("portfolio-theme");
-
-    if (savedTheme === "dragon") {
-        document.body.classList.add("dragon-theme");
-    }
-
-    updateThemeButton();
-
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dragon-theme");
-
-        const isDragon = document.body.classList.contains("dragon-theme");
-        localStorage.setItem("portfolio-theme", isDragon ? "dragon" : "white");
-
-        updateThemeButton();
-    });
-
-    function updateThemeButton() {
-        const isDragon = document.body.classList.contains("dragon-theme");
-
-        themeToggle.textContent = isDragon
-            ? "☀️ White theme"
-            : "🌙 Dragon theme";
-
-        themeToggle.setAttribute("aria-pressed", String(isDragon));
+    if (year) {
+        year.textContent = new Date().getFullYear();
     }
 });

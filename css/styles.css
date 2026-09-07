@@ -54,13 +54,18 @@ header::after {
 header h1 {
     position: relative;
     z-index: 2;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
     color: #ffffff;
     visibility: visible;
     opacity: 1;
 }
 
 header h1::before {
+    flex: 0 0 58px;
     display: grid;
     width: 58px;
     height: 58px;
@@ -121,6 +126,10 @@ main h2 {
 
 section {
     padding: 5rem 0 1rem;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: var(--shadow);
 }
 
 section h2 {
@@ -733,4 +742,135 @@ body.dragon-theme textarea {
 
 #home-page #contact {
     border: 0;
+}
+
+#home-page footer {
+    width: 100%;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    color: #ffffff;
+    background: #25D366;
+    text-align: center;
+}
+
+#home-page footer p {
+    margin: 0;
+}
+
+body.dragon-theme#home-page footer {
+    background: #075E54;
+}
+
+.theme-switch {
+    position: absolute;
+    top: 2rem;
+    right: 8%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    width: 46px;
+    height: 24px;
+    border-radius: 999px;
+    background: #d7f4e4;
+    transition: 0.3s ease;
+}
+
+.slider::before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #075E54;
+    content: "";
+    transition: 0.3s ease;
+}
+
+.theme-switch input:checked + .slider {
+    background: #25D366;
+}
+
+.theme-switch input:checked + .slider::before {
+    transform: translateX(22px);
+    background: #ffffff;
+}
+
+body.dragon-theme {
+    color: #e8fff0;
+    background: #071f1a;
+}
+
+body.dragon-theme header {
+    background: linear-gradient(135deg, #03120f, #075E54);
+}
+
+body.dragon-theme main {
+    background: #071f1a;
+}
+
+body.dragon-theme section,
+body.dragon-theme .stats > div,
+body.dragon-theme .project-card,
+body.dragon-theme .timeline-item,
+body.dragon-theme .education-item {
+    color: #e8fff0;
+    background: #0d3026;
+    border-color: #25D366;
+}
+
+body.dragon-theme h2,
+body.dragon-theme h3,
+body.dragon-theme p,
+body.dragon-theme li {
+    color: #e8fff0;
+}
+
+@media (max-width: 700px) {
+    .theme-switch {
+        top: 1rem;
+        right: 5%;
+    }
+
+    .theme-label {
+        display: none;
+    }
+}
+
+/* About page only: remove section and card borders */
+#about-page main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#about-page main > section,
+#about-page main > section article {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+#about-page main > section {
+    margin: 0;
+    background: transparent;
+}
+
+#about-page main > section article {
+    margin: 0 0 1.25rem;
+    padding: 0;
+    background: transparent;
 }
