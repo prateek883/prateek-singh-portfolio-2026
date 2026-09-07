@@ -1,39 +1,63 @@
-# Portfolio Website
+# Prateek Singh — Portfolio Website
 
-This is a simple portfolio website designed to showcase projects, provide information about the individual or organization, and facilitate contact.
-
-## Project Structure
-
-- `index.html`: The main homepage of the portfolio.
-- `about.html`: Information about the individual or organization.
-- `projects.html`: A showcase of completed projects.
-- `contact.html`: Contact information and form.
-- `css/styles.css`: Styles for the website.
-- `js/script.js`: JavaScript for interactive functionality.
-- `assets/fonts`: Custom font files used in the website.
+A responsive personal portfolio website for Prateek Singh, Marketing Specialist and Technical Content Writer.
 
 ## Features
 
-- Responsive design for various devices.
-- Sections for introduction, projects, and contact information.
-- Interactive elements powered by JavaScript.
+- Responsive layout for desktop and mobile
+- Green and white WhatsApp-inspired theme
+- White and Dragon theme toggle
+- Persistent theme preference using `localStorage`
+- About, projects, publications, and contact sections
+- Technical publication showcase
+- LinkedIn, email, and phone contact links
+- Accessible HTML navigation
 
-## Setup Instructions
+## Technologies
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd portfolio-website
-   ```
-3. Open `index.html` in a web browser to view the portfolio.
+- HTML5
+- CSS3
+- JavaScript
+- LocalStorage API
 
-## Usage
+## Project Structure
 
-Feel free to modify the content in the HTML files to personalize your portfolio. Update the CSS for styling changes and add any JavaScript functionality as needed.
+```text
+portfolio-website/
+├── index.html
+├── about.html
+├── projects.html
+├── contact.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+└── README.md
+```
+
+## Run Locally
+
+Open the project in VS Code and use the Live Server extension.
+
+Alternatively, run:
+
+```powershell
+python -m http.server 5500
+```
+
+Open:
+
+```text
+http://localhost:5500
+```
+
+## Contact
+
+- **Email:** singhprateek089@gmail.com
+- **Phone:** +91 9112156396
+- **Location:** Mumbai, Maharashtra, India
+- **LinkedIn:** [Prateek Singh](https://www.linkedin.com/in/prateek-singh-6ab984145)
 
 ## License
 
-This project is open-source and available for use and modification.
+This project is for personal portfolio use.
