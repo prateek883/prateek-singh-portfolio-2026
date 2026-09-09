@@ -7,118 +7,109 @@
     <title>Prateek Singh | Marketing Specialist</title>
 
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
 
-<body class="bg-[#f8fffb] text-[#075E54]">
-    <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-            <a href="index.html" class="flex items-center gap-3 font-bold">
-                <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white text-xl text-[#075E54] shadow-lg">
-                    PS
-                </span>
-                <span class="text-xl text-white">Prateek Singh</span>
+<body class="home-page">
+    <header class="home-header">
+        <nav class="home-nav" aria-label="Primary navigation">
+            <a href="index.html" class="brand-mark">
+                <span class="brand-initials">PS</span>
+                <span>Prateek Singh</span>
             </a>
-
-            <div class="hidden items-center gap-x-8 md:flex">
-                <a href="index.html" class="font-semibold text-white hover:text-[#b9ffd0]">Home</a>
-                <a href="about.html" class="font-semibold text-white hover:text-[#b9ffd0]">About</a>
-                <a href="projects.html" class="font-semibold text-white hover:text-[#b9ffd0]">Projects</a>
-                <a href="blog.html" class="font-semibold text-white hover:text-[#b9ffd0]">Blog</a>
-                <a href="contact.html" class="font-semibold text-white hover:text-[#b9ffd0]">Contact</a>
+            <div class="home-nav-links">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Work</a>
+                <a href="blog.html">Writing</a>
+                <a href="contact.html">Contact</a>
             </div>
-
-            <a href="contact.html"
-               class="rounded-full bg-white px-5 py-2.5 font-semibold text-[#075E54] shadow hover:bg-[#b9ffd0]">
-                Let’s Connect
-            </a>
+            <a href="contact.html" class="home-nav-cta">Start a conversation <span aria-hidden="true">↗</span></a>
         </nav>
     </header>
 
     <main>
-        <section class="relative isolate overflow-hidden bg-gradient-to-br from-[#075E54] to-[#25D366] px-6 pb-32 pt-36 lg:px-8">
-            <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_22rem]">
-                <div class="max-w-4xl">
-                    <p class="mb-5 font-bold uppercase tracking-[0.2em] text-[#b9ffd0]">
-                        Marketing Specialist · Technical Content Writer
-                    </p>
-
-                    <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                        Turning complex technology into business stories.
-                    </h1>
-
-                    <p class="mt-8 max-w-2xl text-lg leading-8 text-[#e8fff0]">
-                        I combine software-development knowledge with strategic
-                        storytelling, SEO, product marketing and demand-generation
-                        campaigns.
-                    </p>
-
-                    <div class="mt-10 flex flex-wrap gap-4">
-                        <a href="contact.html"
-                           class="rounded-full bg-white px-6 py-3 font-bold text-[#075E54] shadow-lg transition hover:-translate-y-1 hover:bg-[#b9ffd0]">
-                            Let’s Connect
-                        </a>
-
-                        <a href="projects.html"
-                           class="rounded-full border border-white px-6 py-3 font-bold text-white transition hover:bg-white hover:text-[#075E54]">
-                            View Publications
-                        </a>
-                    </div>
+        <section class="home-hero">
+            <div class="hero-copy">
+                <p class="home-kicker"><span></span> Marketing specialist · Technical writer</p>
+                <h1>Clear ideas for a <em>technical</em> world.</h1>
+                <p class="hero-intro">I turn complex products, platforms and possibilities into stories people understand, remember and act on.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="primary-action">Let’s work together <span aria-hidden="true">↗</span></a>
+                    <a href="about.html" class="text-action">More about me <span aria-hidden="true">→</span></a>
                 </div>
-
-                <div class="flex justify-center lg:justify-end">
-                    <img src="assets/profile-photo.webp"
-                         alt="Portrait of Prateek Singh"
-                        class="h-64 w-64 rounded-full object-cover shadow-2xl sm:h-80 sm:w-80">
+                <div class="hero-proof">
+                    <div class="proof-avatars"><span>PS</span><span>AI</span><span>SEO</span></div>
+                    <p><strong>Content with a point of view.</strong><br>Built for curious readers and serious business goals.</p>
                 </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-orbit"></div>
+                <div class="portrait-frame">
+                    <img src="assets/profile-photo.webp" alt="Portrait of Prateek Singh">
+                </div>
+                <div class="floating-note note-top"><span>01</span><strong>Make it clear</strong></div>
+                <div class="floating-note note-bottom"><span>✦</span><strong>Make it useful</strong></div>
             </div>
         </section>
 
-        <section class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-            <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-                <div>
-                    <p class="font-bold uppercase tracking-[0.2em] text-[#25D366]">
-                        About Me
-                    </p>
-
-                    <h2 class="mt-3 text-4xl font-bold tracking-tight text-[#075E54] sm:text-5xl">
-                        Simplifying the complex.
-                    </h2>
-
-                    <p class="mt-6 text-lg leading-8 text-slate-600">
-                        I have 10+ years of experience creating content that connects
-                        technology with business outcomes. My work spans SEO strategy,
-                        thought leadership, product marketing, technical content and
-                        AI-assisted content workflows.
-                    </p>
-                </div>
-
-                <div class="grid gap-5 sm:grid-cols-3">
-                    <div class="rounded-3xl bg-white p-6 text-center shadow-lg ring-1 ring-[#cceedd]">
-                        <strong class="block text-4xl font-bold text-[#25D366]">10+</strong>
-                        <span class="mt-2 block text-sm text-slate-600">Years of experience</span>
-                    </div>
-
-                    <div class="rounded-3xl bg-white p-6 text-center shadow-lg ring-1 ring-[#cceedd]">
-                        <strong class="block text-4xl font-bold text-[#25D366]">10+</strong>
-                        <span class="mt-2 block text-sm text-slate-600">Technology domains</span>
-                    </div>
-
-                    <div class="rounded-3xl bg-white p-6 text-center shadow-lg ring-1 ring-[#cceedd]">
-                        <strong class="block text-4xl font-bold text-[#25D366]">SEO</strong>
-                        <span class="mt-2 block text-sm text-slate-600">Content strategy</span>
-                    </div>
-                </div>
+        <section class="home-intro section-shell">
+            <div class="section-heading">
+                <p class="home-kicker"><span></span> What I do</p>
+                <h2>Strategy, substance<br>and a human voice.</h2>
             </div>
+            <div class="intro-copy">
+                <p>I work at the intersection of technology and communication, helping ambitious teams explain what they do and why it matters.</p>
+                <a href="projects.html" class="text-action">Explore selected work <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="capability-grid section-shell" aria-label="Capabilities">
+            <article class="capability-card featured-capability">
+                <span class="card-index">01</span>
+                <div class="capability-icon">✦</div>
+                <h3>Technical storytelling</h3>
+                <p>Clear narratives for products and ideas that deserve to be understood.</p>
+                <a href="contact.html" aria-label="Learn about technical storytelling">↗</a>
+            </article>
+            <article class="capability-card">
+                <span class="card-index">02</span>
+                <div class="capability-icon">⌁</div>
+                <h3>SEO content strategy</h3>
+                <p>Useful, discoverable content mapped to real questions and outcomes.</p>
+                <a href="blog.html" aria-label="Read SEO content writing">↗</a>
+            </article>
+            <article class="capability-card">
+                <span class="card-index">03</span>
+                <div class="capability-icon">◌</div>
+                <h3>Product marketing</h3>
+                <p>Positioning and messaging that connect features to customer value.</p>
+                <a href="contact.html" aria-label="Learn about product marketing">↗</a>
+            </article>
+        </section>
+
+        <section class="home-quote section-shell">
+            <p class="quote-mark">“</p>
+            <blockquote>Good content does not make technology sound simpler. It makes the value impossible to miss.</blockquote>
+            <p class="quote-byline">Prateek Singh <span>·</span> Marketing specialist and technical content writer</p>
+        </section>
+
+        <section class="home-cta section-shell">
+            <div>
+                <p class="home-kicker"><span></span> Have a story to tell?</p>
+                <h2>Let’s make it<br><em>worth reading.</em></h2>
+            </div>
+            <a href="contact.html" class="primary-action">Get in touch <span aria-hidden="true">↗</span></a>
         </section>
     </main>
 
-    <footer class="bg-white px-6 py-8 text-center text-[#075E54] shadow-lg ring-1 ring-[#cceedd]">
-        <p>
-            &copy; <span id="current-year"></span>
-            Prateek Singh. All rights reserved.
-        </p>
+    <footer class="home-footer">
+        <p>&copy; <span id="current-year"></span> Prateek Singh</p>
+        <p>Marketing · Content · Technology</p>
     </footer>
 </body>
 </html>

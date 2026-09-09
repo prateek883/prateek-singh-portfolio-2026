@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap");
+
+body:not(.home-page) {
+    --whatsapp-dark: #075E54;
+    --whatsapp-teal: #128C7E;
+    --whatsapp-green: #25D366;
+    --whatsapp-light: #DCF8C6;
+    --whatsapp-surface: #F0FFF4;
+    --whatsapp-line: #CDEED7;
+    --whatsapp-shadow: 0 14px 35px rgba(7, 94, 84, 0.12);
+    background: var(--whatsapp-surface) !important;
+    color: var(--whatsapp-dark) !important;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.65;
+}
+
+body:not(.home-page) header,
+body:not(.home-page) header.bg-gradient-to-r {
+    border-bottom: 1px solid var(--whatsapp-line) !important;
+    background: #ffffff !important;
+    color: var(--whatsapp-dark) !important;
+}
+
+body:not(.home-page) nav a {
+    color: var(--whatsapp-dark) !important;
+}
+
+body:not(.home-page) nav a:hover,
+body:not(.home-page) nav a[aria-current="page"] {
+    color: var(--whatsapp-teal) !important;
+}
+
+body:not(.home-page) header .bg-white {
+    color: #ffffff !important;
+    background: var(--whatsapp-green) !important;
+}
+
+body:not(.home-page) header .text-white {
+    color: var(--whatsapp-dark) !important;
+}
+
+body:not(.home-page) header .bg-\[\#075E54\].text-white {
+    color: #ffffff !important;
+    background: var(--whatsapp-dark) !important;
+}
+
+body:not(.home-page) header a.bg-white,
+body:not(.home-page) header a.bg-\[\#25D366\] {
+    color: #ffffff !important;
+    background: var(--whatsapp-green) !important;
+}
+
+body:not(.home-page) main {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+body:not(.home-page) main h1,
+body:not(.home-page) main h2,
+body:not(.home-page) main h3 {
+    color: var(--whatsapp-dark) !important;
+    font-family: Manrope, sans-serif;
+    letter-spacing: -0.035em;
+}
+
+body:not(.home-page) main > section {
+    border: 1px solid var(--whatsapp-line) !important;
+    border-radius: 20px !important;
+    background: #ffffff !important;
+}
+
+body:not(.home-page) main > section + section {
+    margin-top: 1.5rem;
+}
+
+body:not(.home-page) .projects-list {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body:not(.home-page) .projects-intro {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body:not(.home-page) .about-intro {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body:not(.home-page) main > section,
+body:not(.home-page) article,
+body:not(.home-page) form {
+    border-color: var(--whatsapp-line) !important;
+    box-shadow: var(--whatsapp-shadow) !important;
+}
+
+body:not(.home-page) a:hover {
+    color: var(--whatsapp-teal) !important;
+}
+
+body:not(.home-page) .bg-\[\#f8fffb\] {
+    background: var(--whatsapp-surface) !important;
+}
+
+body:not(.home-page) .bg-\[\#e8fdf0\] {
+    background: var(--whatsapp-light) !important;
+}
+
+body:not(.home-page) .hover\:bg-\[\#b9ffd0\]:hover {
+    background: var(--whatsapp-light) !important;
+}
+
+body:not(.home-page) .ring-\[\#cceedd\],
+body:not(.home-page) .ring-\[\#d9f0e2\],
+body:not(.home-page) .ring-\[\#b9e8ca\] {
+    --tw-ring-color: var(--whatsapp-line) !important;
+}
+
+body:not(.home-page) .bg-\[\#075E54\] {
+    color: #ffffff !important;
+    background: var(--whatsapp-dark) !important;
+}
+
+body:not(.home-page) .bg-\[\#25D366\] {
+    color: #ffffff !important;
+    background: var(--whatsapp-green) !important;
+}
+
+body:not(.home-page) .text-\[\#075E54\] {
+    color: var(--whatsapp-dark) !important;
+}
+
+body:not(.home-page) .text-\[\#25D366\] {
+    color: var(--whatsapp-green) !important;
+}
+
+body:not(.home-page) .text-\[\#128C7E\] {
+    color: var(--whatsapp-teal) !important;
+}
+
+body:not(.home-page) .text-slate-900,
+body:not(.home-page) .text-slate-700 {
+    color: var(--whatsapp-dark) !important;
+}
+
+body:not(.home-page) .text-slate-600,
+body:not(.home-page) .text-slate-500 {
+    color: #55736B !important;
+}
+
+body:not(.home-page) .border-slate-200,
+body:not(.home-page) .border-slate-700 {
+    border-color: var(--whatsapp-line) !important;
+}
+
+body:not(.home-page) input,
+body:not(.home-page) textarea {
+    border-color: var(--whatsapp-line) !important;
+    border-radius: 10px;
+    background: #ffffff !important;
+}
+
+body:not(.home-page) input:focus,
+body:not(.home-page) textarea:focus {
+    border-color: var(--whatsapp-green) !important;
+    outline: 3px solid rgba(37, 211, 102, 0.16);
+}
+
+body:not(.home-page) footer {
+    color: var(--whatsapp-dark) !important;
+    background: #ffffff !important;
+}
