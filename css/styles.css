@@ -479,6 +479,52 @@ body.dragon-theme footer {
     margin: auto;
 }
 
+.home-nav-toggle,
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.28rem;
+    width: 44px;
+    height: 44px;
+    padding: 0.7rem 0.65rem;
+    border: 1px solid var(--home-line);
+    border-radius: 12px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-nav-toggle:hover,
+.nav-toggle:hover {
+    border-color: var(--home-green);
+    box-shadow: 0 8px 18px rgba(11, 128, 107, 0.12);
+}
+
+.home-nav-toggle span,
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--home-ink);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.home-nav-toggle.is-open span:nth-child(1),
+.nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.home-nav-toggle.is-open span:nth-child(2),
+.nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.home-nav-toggle.is-open span:nth-child(3),
+.nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 .brand-mark {
     display: inline-flex;
     align-items: center;
@@ -958,8 +1004,37 @@ body.dragon-theme footer {
 }
 
 @media (max-width: 850px) {
+    .home-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+    }
+
+    .home-nav-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
     .home-nav-links {
         display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        order: 3;
+        width: 100%;
+        gap: 0.8rem 1.2rem;
+        padding: 0.9rem 0.75rem;
+        border: 1px solid var(--home-line);
+        border-radius: 16px;
+        background: #ffffff;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .home-nav-links.is-open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .home-hero {
@@ -988,8 +1063,23 @@ body.dragon-theme footer {
         padding: 1rem 5%;
     }
 
+    .home-nav {
+        justify-content: center;
+    }
+
+    .brand-mark {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .home-nav-links {
+        gap: 0.7rem 1rem;
+    }
+
     .home-nav-cta {
-        padding: 0.6rem 0.75rem;
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 0.8rem;
         font-size: 0.75rem;
     }
 

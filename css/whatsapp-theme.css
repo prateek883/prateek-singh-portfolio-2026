@@ -21,6 +21,52 @@ body:not(.home-page) header.bg-gradient-to-r {
     color: var(--whatsapp-dark) !important;
 }
 
+.nav-toggle,
+body:not(.home-page) .nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid var(--whatsapp-line);
+    border-radius: 12px;
+    width: 44px;
+    height: 44px;
+    padding: 0.65rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-toggle:hover,
+body:not(.home-page) .nav-toggle:hover {
+    border-color: var(--whatsapp-green);
+    box-shadow: 0 8px 18px rgba(7, 94, 84, 0.12);
+}
+
+.nav-toggle span,
+body:not(.home-page) .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--whatsapp-dark);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.is-open span:nth-child(1),
+body:not(.home-page) .nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2),
+body:not(.home-page) .nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-open span:nth-child(3),
+body:not(.home-page) .nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 body:not(.home-page) nav a {
     color: var(--whatsapp-dark) !important;
 }
@@ -28,6 +74,12 @@ body:not(.home-page) nav a {
 body:not(.home-page) nav a:hover,
 body:not(.home-page) nav a[aria-current="page"] {
     color: var(--whatsapp-teal) !important;
+}
+
+body:not(.home-page) .site-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 body:not(.home-page) header .bg-white {
@@ -176,4 +228,112 @@ body:not(.home-page) textarea:focus {
 body:not(.home-page) footer {
     color: var(--whatsapp-dark) !important;
     background: #ffffff !important;
+}
+
+@media (max-width: 1024px) {
+    body:not(.home-page) main {
+        width: min(100%, 92%);
+    }
+
+    body:not(.home-page) header nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem 1rem;
+        justify-content: center;
+        padding: 1rem 1.25rem;
+    }
+
+    body:not(.home-page) header nav > a:first-child {
+        width: 100%;
+        justify-content: center;
+    }
+
+    body:not(.home-page) .site-nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.25rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    body:not(.home-page) header {
+        padding: 0.5rem 0;
+    }
+
+    body:not(.home-page) .nav-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    body:not(.home-page) header nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body:not(.home-page) header nav > a:first-child,
+    body:not(.home-page) header nav > a:last-child,
+    body:not(.home-page) .site-nav-links {
+        width: 100%;
+    }
+
+    body:not(.home-page) header nav > a:first-child {
+        justify-content: center;
+    }
+
+    body:not(.home-page) header nav > a:last-child {
+        text-align: center;
+    }
+
+    body:not(.home-page) .site-nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.9rem 1rem;
+        border: 1px solid var(--whatsapp-line);
+        border-radius: 16px;
+        background: #ffffff;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    body:not(.home-page) .site-nav-links.is-open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    body:not(.home-page) main {
+        width: min(100%, 92%);
+    }
+
+    body:not(.home-page) main > section,
+    body:not(.home-page) article,
+    body:not(.home-page) .rounded-3xl,
+    body:not(.home-page) .rounded-2xl {
+        padding: 1.25rem !important;
+    }
+
+    body:not(.home-page) .grid.gap-8.md\:grid-cols-2,
+    body:not(.home-page) .grid.gap-16.lg\:grid-cols-3,
+    body:not(.home-page) .grid.gap-6.md\:grid-cols-2.lg\:grid-cols-3,
+    body:not(.home-page) .grid.gap-4.sm\:grid-cols-2.lg\:grid-cols-3,
+    body:not(.home-page) .grid.gap-6.sm\:grid-cols-2.lg\:col-span-2 {
+        grid-template-columns: 1fr !important;
+    }
+
+    body:not(.home-page) h1 {
+        font-size: clamp(2.2rem, 8vw, 3.2rem) !important;
+    }
+
+    body:not(.home-page) h2 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+    }
+
+    body:not(.home-page) .mt-20,
+    body:not(.home-page) .mt-24 {
+        margin-top: 3rem !important;
+    }
 }

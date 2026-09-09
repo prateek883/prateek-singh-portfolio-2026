@@ -121,11 +121,37 @@ function enableSmoothNavigation() {
     });
 }
 
+function enableMobileNavigation() {
+    const toggles = document.querySelectorAll('.nav-toggle, .home-nav-toggle');
+
+    toggles.forEach(toggle => {
+        const targetId = toggle.getAttribute('aria-controls');
+        const targetMenu = targetId ? document.getElementById(targetId) : null;
+
+        if (!targetMenu) return;
+
+        toggle.addEventListener('click', () => {
+            const isOpen = targetMenu.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+            toggle.classList.toggle('is-open', isOpen);
+        });
+
+        targetMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                targetMenu.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.classList.remove('is-open');
+            });
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     renderExperience();
     renderPublications();
     renderEducation();
     enableSmoothNavigation();
+    enableMobileNavigation();
 
     const year = document.querySelector("#current-year");
 
