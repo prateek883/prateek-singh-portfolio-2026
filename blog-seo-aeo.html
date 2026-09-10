@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Why SEO and AEO work together to improve visibility in AI-powered search.">
+    <title>Where SEO and AEO Meet | Prateek Singh</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/whatsapp-theme.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js" defer></script>
+    <style>
+        body {
+            background: #f0efee;
+            color: #1e2826;
+        }
+
+        .page-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 4rem;
+        }
+
+        .top-heading {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .top-heading h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 700;
+            letter-spacing: -0.06em;
+            line-height: 0.95;
+            font-size: clamp(4rem, 8vw, 10rem);
+            color: #1b1b1a;
+        }
+
+        .top-heading .tagline {
+            margin-top: 1.2rem;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.5rem, 2.8vw, 3rem);
+            font-style: italic;
+            color: #2d312f;
+        }
+
+        .divider {
+            width: 100%;
+            border-top: 2px dashed rgba(53, 58, 56, 0.45);
+            margin: 2.2rem 0 2rem;
+        }
+
+        .venn-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 0.5rem 0 0.25rem;
+        }
+
+        .half-circle {
+            position: relative;
+            width: 50%;
+            min-height: 560px;
+            padding: 2rem 1.5rem 1.5rem;
+            border: 1px solid rgba(35, 42, 39, 0.4);
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+            overflow: visible;
+        }
+
+        .half-circle.seo {
+            background: rgba(255, 255, 255, 0.74);
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            margin-right: -6%;
+        }
+
+        .half-circle.aeo {
+            background: rgba(233, 212, 201, 0.8);
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            margin-left: -6%;
+        }
+
+        .half-circle .title {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.8rem, 4vw, 4.5rem);
+            font-weight: 700;
+            letter-spacing: -0.06em;
+            color: #2c413d;
+            margin-bottom: 0.25rem;
+        }
+
+        .half-circle .subtitle {
+            display: block;
+            text-align: center;
+            font-size: clamp(1.15rem, 1.7vw, 1.8rem);
+            opacity: 0.9;
+            margin-bottom: 1.2rem;
+            color: #3b4a47;
+            font-weight: 500;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.52);
+            border: 1px solid rgba(46, 53, 50, 0.15);
+            border-radius: 0.9rem;
+            padding: 0.9rem 1rem;
+            margin: 0.9rem 0.5rem;
+            color: #2b3b38;
+            font-size: clamp(1rem, 1.8vw, 1.3rem);
+            line-height: 1.45;
+            box-shadow: 0 10px 18px rgba(17, 27, 25, 0.04);
+        }
+
+        .info-box strong {
+            font-weight: 700;
+        }
+
+        .overlap-label {
+            position: absolute;
+            left: 50%;
+            top: 52%;
+            transform: translate(-50%, -50%);
+            background: rgba(162, 99, 68, 0.95);
+            color: #fff;
+            border-radius: 1.2rem;
+            padding: 0.8rem 1.5rem;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.8rem, 2.8vw, 3.2rem);
+            line-height: 1.1;
+            text-align: center;
+            box-shadow: 0 18px 30px rgba(82, 53, 39, 0.18);
+            z-index: 3;
+            white-space: nowrap;
+        }
+
+        .article-box {
+            margin-top: 2.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(76, 86, 83, 0.12);
+            box-shadow: 0 18px 30px rgba(26, 32, 30, 0.06);
+            padding: 2rem 1.25rem;
+        }
+
+        .article-box p,
+        .article-box li {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #334340;
+        }
+
+        .article-box h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #1d332f;
+            font-weight: 700;
+        }
+
+        .article-box ul {
+            margin-left: 1.3rem;
+            padding-left: 0.25rem;
+        }
+
+        .quote {
+            background: rgba(162, 211, 176, 0.18);
+            border-left: 4px solid #2c9a63;
+            padding: 1rem 1.2rem;
+            color: #1c322c;
+            border-radius: 0.75rem;
+            margin-top: 1.5rem;
+            font-size: 1.25rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .venn-wrap {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .half-circle {
+                width: min(100%, 520px);
+                min-height: 420px;
+                margin: 0 0 1rem;
+                border-radius: 50%;
+            }
+
+            .overlap-label {
+                position: static;
+                transform: none;
+                margin: 1rem auto 0;
+                display: block;
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+<body class="site-page bg-[#f8fffb] text-[#075E54]">
+    <header class="bg-gradient-to-r from-[#075E54] to-[#25D366]">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white text-xl font-bold text-[#075E54]">PS</span>
+                <span class="text-xl font-bold text-white">Prateek Singh</span>
+            </a>
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="index.html" class="font-semibold text-white hover:text-[#b9ffd0]">Home</a>
+                <a href="about.html" class="font-semibold text-white hover:text-[#b9ffd0]">About</a>
+                <a href="projects.html" class="font-semibold text-white hover:text-[#b9ffd0]">Projects</a>
+                <a href="blog.html" class="font-semibold text-white hover:text-[#b9ffd0]">Blog</a>
+                <a href="contact.html" class="font-semibold text-white hover:text-[#b9ffd0]">Contact</a>
+            </div>
+            <a href="contact.html" class="rounded-full bg-white px-5 py-2.5 font-semibold text-[#075E54] shadow hover:bg-[#b9ffd0]">Let’s Connect</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <a href="blog.html" class="font-semibold text-[#128C7E] hover:text-[#075E54]">&larr; Back to blog</a>
+        <div class="top-heading">
+            <h1>Where SEO and AEO meet</h1>
+            <div class="tagline">Visibility in 2026 = rankings + citations.</div>
+        </div>
+
+        <div class="mt-8 flex items-center justify-center gap-3">
+            <button type="button" data-blog-like aria-label="Like this blog post" aria-pressed="false" class="inline-flex items-center gap-2 rounded-full border border-[#cceedd] bg-white px-4 py-2 text-sm font-semibold text-[#075E54] shadow-sm transition hover:-translate-y-0.5 hover:border-[#25D366] focus:outline-none focus:ring-2 focus:ring-[#25D366]/40">
+                <span aria-hidden="true">❤</span>
+                <span class="like-label">Like</span>
+            </button>
+            <button type="button" data-blog-share aria-label="Share this blog post" class="inline-flex items-center gap-2 rounded-full bg-[#075E54] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-[#25D366]/40">
+                <span aria-hidden="true">↗</span>
+                <span class="share-label">Share</span>
+            </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="venn-wrap">
+            <div class="half-circle seo">
+                <div class="title">SEO</div>
+                <div class="subtitle">Search Engine Optimisation</div>
+                <div class="info-box"><strong>What it optimises for:</strong><br>Rankings on search results pages</div>
+                <div class="info-box">Backlinks and domain authority</div>
+                <div class="info-box">Keywords and meta tags</div>
+                <div class="info-box">Page speed and technical performance</div>
+                <div class="info-box">Click-through rate and traffic</div>
+            </div>
+
+            <div class="half-circle aeo">
+                <div class="title">AEO</div>
+                <div class="subtitle">Answer Engine Optimisation</div>
+                <div class="info-box"><strong>What it optimises for:</strong><br>Citations in AI-generated answers</div>
+                <div class="info-box">Featured snippets and answer boxes</div>
+                <div class="info-box">FAQ schema and structured data</div>
+                <div class="info-box">Clear, direct answers to questions</div>
+                <div class="info-box">Entity recognition</div>
+            </div>
+
+            <div class="overlap-label">Where they<br>overlap</div>
+        </div>
+
+        <article class="article-box">
+            <p>Search is no longer only a list of blue links. In 2026, visibility is shaped by both traditional rankings and AI-generated answers that pull from trusted sources.</p>
+
+            <h2>SEO still matters, but it is no longer the whole story</h2>
+            <p>SEO helps your content appear in search results and earn clicks. AEO helps your expertise appear in answer engines, AI summaries and citation-heavy experiences.</p>
+            <p>The strongest brands are not choosing one approach over the other. They are building content that is visible in search and useful enough to be cited as the answer.</p>
+
+            <h2>What both strategies need</h2>
+            <ul>
+                <li>High-quality, authoritative content built around real user intent.</li>
+                <li>Clear topical expertise with well-structured explanations.</li>
+                <li>Regular updates that reflect current information and customer questions.</li>
+                <li>Good technical foundations, including mobile performance and fast loading times.</li>
+                <li>Content designed to answer direct questions in plain, confident language.</li>
+            </ul>
+
+            <h2>The real goal</h2>
+            <p>SEO gets you discovered. AEO helps you become the answer. Together, they create a stronger digital presence: one that is both searchable and quotable.</p>
+
+            <div class="quote">Visibility in 2026 is not just about being found. It is about being trusted enough to be cited.</div>
+        </article>
+    </main>
+
+    <footer class="bg-white px-6 py-8 text-center text-[#075E54] shadow-lg ring-1 ring-[#cceedd]">
+        <p>&copy; <span id="current-year"></span> Prateek Singh. All rights reserved.</p>
+    </footer>
+</body>
+</html>

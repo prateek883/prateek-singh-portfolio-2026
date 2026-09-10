@@ -146,12 +146,57 @@ function enableMobileNavigation() {
     });
 }
 
+function enableBlogInteractions() {
+    document.querySelectorAll('[data-blog-like]').forEach(button => {
+        button.addEventListener('click', () => {
+            const liked = button.classList.toggle('liked');
+            button.setAttribute('aria-pressed', String(liked));
+            const label = button.querySelector('.like-label');
+
+            if (label) {
+                label.textContent = liked ? 'Liked' : 'Like';
+            }
+        });
+    });
+
+    document.querySelectorAll('[data-blog-share]').forEach(button => {
+        button.addEventListener('click', async () => {
+            const title = document.title || 'Prateek Singh Blog';
+            const url = window.location.href;
+
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title, url });
+                    return;
+                } catch (error) {
+                    // Fall back to copy link when sharing is dismissed.
+                }
+            }
+
+            try {
+                await navigator.clipboard.writeText(url);
+                const label = button.querySelector('.share-label');
+
+                if (label) {
+                    label.textContent = 'Copied';
+                    setTimeout(() => {
+                        label.textContent = 'Share';
+                    }, 1200);
+                }
+            } catch (error) {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+            }
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     renderExperience();
     renderPublications();
     renderEducation();
     enableSmoothNavigation();
     enableMobileNavigation();
+    enableBlogInteractions();
 
     const year = document.querySelector("#current-year");
 

@@ -28,6 +28,52 @@ body {
     color: var(--text);
     font-family: Inter, Arial, sans-serif;
     line-height: 1.7;
+    font-size: clamp(0.96rem, 0.9vw + 0.7rem, 1.08rem);
+}
+
+* {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+html {
+    font-size: clamp(14px, 0.8vw + 12px, 18px);
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a, button {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: clamp(2.2rem, 7vw, 3.4rem) !important;
+        line-height: 1.08 !important;
+    }
+
+    h2 {
+        font-size: clamp(1.7rem, 5vw, 2.5rem) !important;
+        line-height: 1.15 !important;
+    }
+
+    h3 {
+        font-size: clamp(1.2rem, 3.8vw, 1.9rem) !important;
+        line-height: 1.2 !important;
+    }
+
+    p,
+    li,
+    a,
+    button,
+    time,
+    span {
+        font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+    }
 }
 
 header {
@@ -1077,10 +1123,7 @@ body.dragon-theme footer {
     }
 
     .home-nav-cta {
-        width: 100%;
-        text-align: center;
-        padding: 0.7rem 0.8rem;
-        font-size: 0.75rem;
+        display: none;
     }
 
     .home-hero {
